@@ -1,0 +1,25 @@
+[tool.poetry]
+packages = [{ include = "src/xgs" }]
+
+name = "xgs"
+version = "0.1.0"
+description = "A tool for developing shells with gtk4"
+authors = ["Axel <nigthmaresans2@gmail.com>"]
+readme = "README.md"
+[tool.poetry.dependencies]
+python = "^3.12"
+PyGObject = "^3.48.2"
+
+[tool.poetry.group.dev.dependencies]
+PyGObject-stubs = "^2.11.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.extras]
+cli_color = ["colorama"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
